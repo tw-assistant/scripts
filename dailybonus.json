@@ -1,0 +1,1 @@
+{"id":36,"active":true,"name":"Daily Bonus","timeGap":1440,"lastSchedule":"2021-03-14T03:59:56.722Z","useGroups":false,"group":"","params":{},"nextStepId":2,"steps":[{"id":1,"gotoUrl":"{gameUrl}?village={id}&screen=info_player&mode=daily_bonus","script":"$(\".reward .btn\").click()"}]}
