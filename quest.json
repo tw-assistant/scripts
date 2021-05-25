@@ -7,7 +7,7 @@
   "nextStepId": 2,
   "steps": [
     {
-      "id": 1,
+      "id": 10,
       "gotoUrl": "{gameUrl}?village={id}&screen=overview",
       "script": "new Promise((resolve) => {\n  $(\".quest.opened.finished\").click();\n  setTimeout(() => {\n    $(\".popup_box_container .btn-confirm-yes\").click();\n    resolve();\n  }, 3000);\n});\n"
     }
