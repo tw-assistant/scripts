@@ -7,7 +7,7 @@ function delay(time, random = 0) {
 }
 
 new Promise(async (resolve, reject) => {
-    $.getScript('https://shinko-to-kuma.com/scripts/massScavenge.js');
+    $.getScript('https://cdn.jsdelivr.net/gh/jonas-duarte/bkp-shinko-to-kuma/massScavenge.js');
     await delay(5000)
 
     $("input#spear").prop('checked', IDLE.spear ? true : false);
