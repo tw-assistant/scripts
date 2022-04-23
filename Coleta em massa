@@ -1,0 +1,42 @@
+const IDLE = TWA ;
+
+function delay(time, random = 0) {
+    return new Promise(function (resolve) {
+        setTimeout(resolve, time + parseInt(Math.random() * random));
+    });
+}
+
+new Promise(async (resolve, reject) => {
+    $.getScript('https://shinko-to-kuma.com/scripts/massScavenge.js');
+    await delay(5000)
+
+    $("input#spear").prop('checked', IDLE.spear ? true : false);
+    $("input#sword").prop('checked', IDLE.sword ? true : false);
+    $("input#axe").prop('checked', IDLE.axe ? true : false);
+    $("input#light").prop('checked', IDLE.light ? true : false);
+    $("input#heavy").prop('checked', IDLE.heavy ? true : false);
+
+    $("input#spearBackup").val(IDLE.spearBackup)
+    $("input#swordBackup").val(IDLE.swordBackup)
+    $("input#axeBackup").val(IDLE.axeBackup)
+    $("input#lightBackup").val(IDLE.lightBackup)
+    $("input#heavyBackup").val(IDLE.heavyBackup)
+
+    $("#timeSelectorHours").click()
+    await delay(500)
+    $(".runTime_off").val(IDLE.runTime_off)
+    $(".runTime_def").val(IDLE.runTime_def)
+
+
+    $('input#sendMass').click()
+
+    await delay(10000);
+
+    const sendButtons = $('input#sendMass')
+    for (let a = 0; a < sendButtons.length; a++) {
+        const sendButton = sendButtons[a];
+        sendButton.click()
+        await delay(3000, 1000)
+    }
+    resolve()
+})
