@@ -1,0 +1,13 @@
+setTimeout(function(){
+$('input#unit_input_snob.unit_input_field').val("1")
+
+setTimeout(function(){
+$('[value="Inserir tropas"]')[0].click()
+
+
+setTimeout(function(){
+$('[class="btn btn-recruit"]')[0].click()},5000);
+
+    },5000);
+
+},3000);
