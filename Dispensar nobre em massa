@@ -1,0 +1,17 @@
+setTimeout(function(){
+$('input#unit_input_snob.unit_input_field').val("2")
+
+setTimeout(function(){
+$('[value="Inserir tropas"]')[0].click()
+
+setTimeout(function(){
+$('[value="Dispensar"]')[0].click()
+
+setTimeout(function(){
+$('[class="btn evt-confirm-btn btn-confirm-yes"]').click()},5000);
+
+},5000);
+
+},5000);
+
+},3000);
